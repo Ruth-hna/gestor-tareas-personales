@@ -4,11 +4,12 @@
 tareas = []
 
 def mostrar_menu():
-    print("\n===== GESTOR DE TAREAS PERSONALES =====")
+    print("\nGESTOR DE TAREAS PERSONALES")
     print("1. Agregar tarea")
     print("2. Mostrar tareas")
     print("3. Salir")
     print("4. Contar tareas")
+    print("5. Eliminar todas las tareas")
 
 def agregar_tarea():
     descripcion = input("Escribe la nueva tarea: ").strip()
@@ -31,7 +32,7 @@ def contar_tareas():
 def iniciar_programa():
     opcion = ""
 
-    while opcion != "4":
+    while opcion != "5":
         mostrar_menu()
         opcion = input("Selecciona una opcion: ")
 
@@ -42,7 +43,9 @@ def iniciar_programa():
         elif opcion == "3":
             print()
         elif opcion == "4":
-            print("Gracias por utilizar el programa.")    
+            print()
+        elif opcion == "5":
+            print("Gracias por utilizar el programa.")        
         else:
             print("Opcion no valida. Intenta nuevamente.")
 
