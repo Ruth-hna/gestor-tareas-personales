@@ -8,6 +8,7 @@ def mostrar_menu():
     print("1. Agregar tarea")
     print("2. Mostrar tareas")
     print("3. Salir")
+    print("4. Contar tareas")
 
 def agregar_tarea():
     descripcion = input("Escribe la nueva tarea: ").strip()
@@ -18,8 +19,8 @@ def agregar_tarea():
         tareas.append(descripcion)
         print("Tarea agregada correctamente.")
 
-def mostrar_tareas():
-    print("\n----- MIS TAREAS -----")
+def contar_tareas():
+    print("Total de tareas registradas", len(tareas))
 
     if len(tareas) == 0:
         print("Todavia no tienes tareas registradas.")
@@ -30,7 +31,7 @@ def mostrar_tareas():
 def iniciar_programa():
     opcion = ""
 
-    while opcion != "3":
+    while opcion != "4":
         mostrar_menu()
         opcion = input("Selecciona una opcion: ")
 
@@ -39,7 +40,9 @@ def iniciar_programa():
         elif opcion == "2":
             mostrar_tareas()
         elif opcion == "3":
-            print("Gracias por utilizar el programa.")
+            print()
+        elif opcion == "4":
+            print("Gracias por utilizar el programa.")    
         else:
             print("Opcion no valida. Intenta nuevamente.")
 
