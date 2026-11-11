@@ -19,6 +19,9 @@ def agregar_tarea():
     else:
         tareas.append(descripcion)
         print("Tarea agregada correctamente.")
+    else:
+        tareas.append(descripcion)
+        print("Tarea agregada correctamente.")
 
 def contar_tareas():
     print("Total de tareas registradas", len(tareas))
